@@ -1,0 +1,1 @@
+https://github.com/secana/Assembler-Examples/blob/master/FASM/x32/console_loop_primecheck_call.asm
