@@ -1,1 +1,1 @@
-https://github.com/macton/x64-fasm-examples/blob/master/Windows/00_BasicOS/02_pe_messagebox_02.asm
+https://github.com/secana/Assembler-Examples/blob/master/FASM/x32/console_add_call.asm
