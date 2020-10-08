@@ -1,0 +1,301 @@
+Input n: 100
+[0]? -1
+[1]? 0
+[2]? 1
+[3]? -1
+[4]? 0
+[5]? 3
+[6]? -11
+[7]? 222
+[8]? 33
+[9]? 3
+[10]? 3
+[11]? 3
+[12]? 3
+[13]? 3
+[14]? 3
+[15]? 33
+[16]? 3
+[17]? 3
+[18]? 3
+[19]? 3
+[20]? 3
+[21]? 3
+[22]? 3
+[23]? 3
+[24]? 3
+[25]? 3
+[26]? 3
+[27]? 3
+[28]? 3
+[29]? 3
+[30]? 3
+[31]? 3
+[32]? 3
+[33]? 3
+[34]? 3
+[35]? 3
+[36]? 3
+[37]? 3
+[38]? 3
+[39]? 3
+[40]? 3
+[41]? 3
+[42]? 3
+[43]? 3
+[44]? 3
+[45]? 3
+[46]? 3
+[47]? 3
+[48]? 3
+[49]? 3
+[50]? 3
+[51]? 33
+[52]? 3
+[53]? 3
+[54]? 3
+[55]? 3
+[56]? 3
+[57]? 3
+[58]? 3
+[59]? 3
+[60]? 3
+[61]? 3
+[62]? 3
+[63]? 3
+[64]? 3
+[65]? 3
+[66]? 3
+[67]? 3
+[68]? 3
+[69]? 3
+[70]? 3
+[71]? 3
+[72]? 3
+[73]? 3
+[74]? 3
+[75]? 3
+[76]? 3
+[77]? 3
+[78]? 3
+[79]? 3
+[80]? 3
+[81]? 3
+[82]? 3
+[83]? 3
+[84]? 3
+[85]? 3
+[86]? 3
+[87]? 3
+[88]? 3
+[89]? 3
+[90]? 3
+[91]? 3
+[92]? 3
+[93]? 3
+[94]? 3
+[95]? 3
+[96]? 3
+[97]? 3
+[98]? 3
+[99]? 3
+First array[0] = -1
+First array[1] = 0
+First array[2] = 1
+First array[3] = -1
+First array[4] = 0
+First array[5] = 3
+First array[6] = -11
+First array[7] = 222
+First array[8] = 33
+First array[9] = 3
+First array[10] = 3
+First array[11] = 3
+First array[12] = 3
+First array[13] = 3
+First array[14] = 3
+First array[15] = 33
+First array[16] = 3
+First array[17] = 3
+First array[18] = 3
+First array[19] = 3
+First array[20] = 3
+First array[21] = 3
+First array[22] = 3
+First array[23] = 3
+First array[24] = 3
+First array[25] = 3
+First array[26] = 3
+First array[27] = 3
+First array[28] = 3
+First array[29] = 3
+First array[30] = 3
+First array[31] = 3
+First array[32] = 3
+First array[33] = 3
+First array[34] = 3
+First array[35] = 3
+First array[36] = 3
+First array[37] = 3
+First array[38] = 3
+First array[39] = 3
+First array[40] = 3
+First array[41] = 3
+First array[42] = 3
+First array[43] = 3
+First array[44] = 3
+First array[45] = 3
+First array[46] = 3
+First array[47] = 3
+First array[48] = 3
+First array[49] = 3
+First array[50] = 3
+First array[51] = 33
+First array[52] = 3
+First array[53] = 3
+First array[54] = 3
+First array[55] = 3
+First array[56] = 3
+First array[57] = 3
+First array[58] = 3
+First array[59] = 3
+First array[60] = 3
+First array[61] = 3
+First array[62] = 3
+First array[63] = 3
+First array[64] = 3
+First array[65] = 3
+First array[66] = 3
+First array[67] = 3
+First array[68] = 3
+First array[69] = 3
+First array[70] = 3
+First array[71] = 3
+First array[72] = 3
+First array[73] = 3
+First array[74] = 3
+First array[75] = 3
+First array[76] = 3
+First array[77] = 3
+First array[78] = 3
+First array[79] = 3
+First array[80] = 3
+First array[81] = 3
+First array[82] = 3
+First array[83] = 3
+First array[84] = 3
+First array[85] = 3
+First array[86] = 3
+First array[87] = 3
+First array[88] = 3
+First array[89] = 3
+First array[90] = 3
+First array[91] = 3
+First array[92] = 3
+First array[93] = 3
+First array[94] = 3
+First array[95] = 3
+First array[96] = 3
+First array[97] = 3
+First array[98] = 3
+First array[99] = 3
+Second array[0] = -6
+Second array[1] = -5
+Second array[2] = 1
+Second array[3] = -1
+Second array[4] = 0
+Second array[5] = 3
+Second array[6] = -11
+Second array[7] = 222
+Second array[8] = 33
+Second array[9] = 3
+Second array[10] = 3
+Second array[11] = 3
+Second array[12] = 3
+Second array[13] = 3
+Second array[14] = 3
+Second array[15] = 33
+Second array[16] = 3
+Second array[17] = 3
+Second array[18] = 3
+Second array[19] = 3
+Second array[20] = 3
+Second array[21] = 3
+Second array[22] = 3
+Second array[23] = 3
+Second array[24] = 3
+Second array[25] = 3
+Second array[26] = 3
+Second array[27] = 3
+Second array[28] = 3
+Second array[29] = 3
+Second array[30] = 3
+Second array[31] = 3
+Second array[32] = 3
+Second array[33] = 3
+Second array[34] = 3
+Second array[35] = 3
+Second array[36] = 3
+Second array[37] = 3
+Second array[38] = 3
+Second array[39] = 3
+Second array[40] = 3
+Second array[41] = 3
+Second array[42] = 3
+Second array[43] = 3
+Second array[44] = 3
+Second array[45] = 3
+Second array[46] = 3
+Second array[47] = 3
+Second array[48] = 3
+Second array[49] = 3
+Second array[50] = 3
+Second array[51] = 33
+Second array[52] = 3
+Second array[53] = 3
+Second array[54] = 3
+Second array[55] = 3
+Second array[56] = 3
+Second array[57] = 3
+Second array[58] = 3
+Second array[59] = 3
+Second array[60] = 3
+Second array[61] = 3
+Second array[62] = 3
+Second array[63] = 3
+Second array[64] = 3
+Second array[65] = 3
+Second array[66] = 3
+Second array[67] = 3
+Second array[68] = 3
+Second array[69] = 3
+Second array[70] = 3
+Second array[71] = 3
+Second array[72] = 3
+Second array[73] = 3
+Second array[74] = 3
+Second array[75] = 3
+Second array[76] = 3
+Second array[77] = 3
+Second array[78] = 3
+Second array[79] = 3
+Second array[80] = 3
+Second array[81] = 3
+Second array[82] = 3
+Second array[83] = 3
+Second array[84] = 3
+Second array[85] = 3
+Second array[86] = 3
+Second array[87] = 3
+Second array[88] = 3
+Second array[89] = 3
+Second array[90] = 3
+Second array[91] = 3
+Second array[92] = 3
+Second array[93] = 3
+Second array[94] = 3
+Second array[95] = 3
+Second array[96] = 3
+Second array[97] = 3
+Second array[98] = 3
+Second array[99] = 3
