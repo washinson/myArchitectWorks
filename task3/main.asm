@@ -17,7 +17,12 @@
 ; }
 
 ; int main() {
+;     printf("Input a, b and left, right side via space: ");
 ;     scanf("%lf%lf%lf%lf", &a, &b, &l, &r);
+;     if (l > r) {
+;         printf("Left side mustn't be greater then right side");
+;         return 0;
+;     }
 ;     h = (r - l) / n;
 ;     double sum = f(l) + f(r);
 ;     for (int i = 1; i < n; i += 2) {
@@ -40,6 +45,7 @@ section '.data' data readable writable
         str_input_data db 'Input a, b and left, right side via space: ', 0
         str_read_data  db '%lf%lf%lf%lf', 0
         str_result db 'Result is: %lf', 10, 0
+        str_left_side_greater_right_side db 'Left side mustn`t be greater then right side', 0
         str_d db '%lf', 0
 
         n           dd 200
@@ -59,6 +65,20 @@ start:
         invoke scanf, str_read_data, a, b, l, r
 
         finit
+
+        ; comp l and r
+        fld [r]
+        fld [l]
+        fcomi st, st1
+        ffree st0
+        ffree st1
+        jb l_less_or_equal_r
+
+        ; l > r
+        invoke printf, str_left_side_greater_right_side
+        jmp finish
+
+l_less_or_equal_r:
         stdcall calculate_h ; h = (r - l) / n
 
         fldz
