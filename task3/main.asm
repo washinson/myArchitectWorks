@@ -1,3 +1,35 @@
+; Малышенко Александр Михайлович
+; 18 вариант
+;
+; Задача: 
+; Разработать программу интегрирования функции y=a+b*x^-2 (задаётся двумя числами а,b)
+; в заданном диапазоне(задаётся так же) методом Симпсона(использовать FPU)
+; 
+; C++ equivalent solution
+;
+; int n = 200;
+; double h;
+; double a, b;
+; double l, r;
+
+; double f(double x) {
+;     return a + b / (x * x);
+; }
+
+; int main() {
+;     scanf("%lf%lf%lf%lf", &a, &b, &l, &r);
+;     h = (r - l) / n;
+;     double sum = f(l) + f(r);
+;     for (int i = 1; i < n; i += 2) {
+;         sum += 4 * f(l + h * i);
+;     }
+;     for (int i = 2; i < n; i += 2) {
+;         sum += 2 * f(l + h * i);
+;     }
+;     printf("%lf", h * sum / 3);
+;     return 0;
+; }
+
 format PE console
 entry start
 
@@ -27,28 +59,34 @@ start:
         invoke scanf, str_read_data, a, b, l, r
 
         finit
-        stdcall calculate_h
+        stdcall calculate_h ; h = (r - l) / n
 
         fldz
         fst [sum]   ; sum = 0
         ffree st0
 
         fld [l]
-        stdcall f
-        stdcall add_result_to_sum
+        stdcall f ; f(l)
+        stdcall add_result_to_sum ; sum += f(l)
 
         fld [r]
-        stdcall f
-        stdcall add_result_to_sum
+        stdcall f ; f(r)
+        stdcall add_result_to_sum ; sum += f(r)
 
-        stdcall calculate_2i_minus_1_cicrle
+        ; for (int i = 1; i < n; i += 2) {
+        ;     sum += 4 * f(l + h * i);
+        ; }
+        stdcall calculate_2i_minus_1_cicrle 
+        ; for (int i = 2; i < n; i += 2) {
+        ;     sum += 2 * f(l + h * i);
+        ; }
         stdcall calculate_2i_cicrle
 
         fld [h]
         fmul [sum]
         mov [tmp], 3
         fidiv [tmp]
-        fst [result]
+        fst [result] ; result = h * sum / 3
         ffree st0
         invoke printf, str_result, dword[result], dword[result + 4]
 
@@ -58,24 +96,34 @@ finish:
         push 0
         call [ExitProcess]
 
+; calculate_h(): returns void
+; sets h = (r - l) / n 
 calculate_h:
         fld [r]
         fsub [l]
         fidiv [n]
-        fst [h]
+        fst [h] ; h = (r - l) / n
         ffree st0
         ret
 
+; add_result_to_sum(double result): returns void
+; updates sum += result
+; result sends via FPU stack at st(0)
 add_result_to_sum:
         fld [sum]
         fadd st, st1 
-        fst [sum] ; sum += stack_top
+        fst [sum] ; sum += stack_top (result)
         ffree st1
         ffree st0
         ret
 
+; calculate_2i_minus_1_cicrle(): returns void
+; does loop by following C++ instruction:
+; for (int i = 1; i < n; i += 2) {
+;     sum += 4 * f(l + h * i);
+; }
 calculate_2i_minus_1_cicrle:
-        mov ebx, 1
+        mov ebx, 1 ; i = 1
 start_2i_minus_1_loop:
         cmp ebx, [n]
         jge end_2i_minus_1_loop
@@ -92,8 +140,13 @@ start_2i_minus_1_loop:
 end_2i_minus_1_loop:
         ret
 
+; calculate_2i_cicrle(): returns void
+; does loop by following C++ instruction:
+; for (int i = 2; i < n; i += 2) {
+;     sum += 2 * f(l + h * i);
+; }
 calculate_2i_cicrle:
-        mov ebx, 2
+        mov ebx, 2; i = 2
 start_2i_loop:
         cmp ebx, [n]
         jge end_2i_loop
@@ -110,6 +163,10 @@ start_2i_loop:
 end_2i_loop:
         ret
 
+; f(double x): returns double result
+; calculates f(x) = a+b*x^-2
+; x sends via FPU stack at st(0)
+; result sends via FPU stack at st(0)
 f:
         fld1
         fmul st0,st1
